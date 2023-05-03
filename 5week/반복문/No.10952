@@ -1,0 +1,28 @@
+# 백준 10952번
+
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+import java.io.IOException;
+
+public class Main
+{
+	public static void main(String[] args) throws IOException{
+		Scanner sc = new Scanner(System.in);
+		
+		int i=0;
+		while(true){
+		    int c1 = sc.nextInt();
+		    int c2 = sc.nextInt();
+		    
+		    if(c1 == 0 && c2 == 0){
+		        break;
+		    }
+		    
+		    System.out.println(c1+c2);
+		}
+	}
+}
