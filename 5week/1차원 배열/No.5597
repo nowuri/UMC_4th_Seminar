@@ -1,0 +1,39 @@
+# 백준 5597
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int[] hw = new int[30];
+		
+		for(int i=0; i<30;i++){
+		    hw[i] = 0;
+		}
+		
+		for(int i=0; i<28;i++){
+		    int n = sc.nextInt();
+		    hw[n-1] = 1;
+		}
+		
+	    int[] not = new int[2];
+		int m = 0;
+		for(int i=0; i<30;i++){
+		    if(hw[i] != 1){
+		        not[m] = i;
+		        m++;
+		    }
+		}
+		
+		if(not[0] > not[1]){
+		    System.out.println((not[1]+1));
+		    System.out.println((not[0]+1));
+		}
+		else{
+		    System.out.println((not[0]+1));
+		    System.out.println((not[1]+1));
+		}
+	}
+}
