@@ -1,0 +1,40 @@
+# 백준 1546
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+	    int n = sc.nextInt();
+	    int[] Original = new int[n];
+	    
+	    for(int i=0; i<n;i++){
+	        Original[i] = sc.nextInt();
+	    }
+	    
+	    int max = Original[0];
+	    
+	    for(int i=1; i<n;i++){
+	        if(max < Original[i]){
+	            max = Original[i];
+	        }
+	    }
+	    
+	    double[] Changed = new double[n];
+	    
+	    for(int i=0; i<n;i++){
+	        Changed[i] = (Original[i] / (double) max) * 100;
+	        System.out.print(Changed[i] + " ");
+	    }
+	    
+	    double sum = 0;
+	    for(int i=0; i<n;i++){
+	        sum += Changed[i];
+	    }
+	    System.out.println("sum : "+ sum);
+	    
+	   System.out.println((double)sum / n);
+	}
+}
