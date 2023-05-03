@@ -1,0 +1,42 @@
+# 백준 5622번
+
+```java
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+	    int s1 = sc.nextInt();
+	    int[] arr1 = new int[3];
+	    int s2 = sc.nextInt();
+	    int[] arr2 = new int[3];
+	    int i=0;
+	    
+	    while(s1 > 0){
+	        arr1[i] = s1 % 10;
+	        s1 /= 10;
+	        arr2[i] = s2 % 10;
+	        s2 /= 10;
+	        i++;
+	    }
+	    
+	    int n1 = 0;
+	    int n2 = 0;
+	    int m = 1;
+	    for(int k=2;k>=0;k--){
+	        n1 += (arr1[k] * m);
+	        n2 += (arr2[k] * m);
+	        m *= 10;
+	    }
+	    
+	    if(n1 > n2){
+	        System.out.println(n1);
+	    }
+	    else{
+	        System.out.println(n2);
+	    }
+	}
+}
+```
