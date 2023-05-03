@@ -1,23 +1,27 @@
 public class UMC {
 	
-	static class EvenOdd{
-		public static boolean isEven(int num) {
-			if(num % 2 == 0) {
-				return true;
-			}
-			else {
-				return false;
-			}
+	static class Student {
+		String name;
+		int studentID;
+		String major;
+		
+		public Student(String name, int studentID, String major) {
+			this.name = name;
+			this.studentID = studentID;
+			this.major = major;
 		}
+		
+		public void printInfo() {
+			System.out.println("Name: " + name);
+			System.out.println("Student ID: " + studentID);
+			System.out.println("Major: " + major);
+		}
+		
 	}
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		for(int i=1; i<=10; i++) {
-			if(EvenOdd.isEven(i)) {
-				System.out.println(i + " is even.");
-			}
-		}
+		Student student = new Student("최누리", 2110421, "인공지능공학부");
+		student.printInfo();
 	}
 
 }
